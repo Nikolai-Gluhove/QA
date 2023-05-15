@@ -1,4 +1,6 @@
-package animal;
+package animal.pet;
 
-public class Cat extends Animal{
+import animal.Animal;
+
+public class Cat extends Animal {
 }

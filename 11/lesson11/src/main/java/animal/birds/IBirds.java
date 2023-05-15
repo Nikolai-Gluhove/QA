@@ -1,2 +1,7 @@
-package animal.birds;public interface IBirds {
+package animal.birds;
+
+public interface IBirds {
+
+    public String fly();
+
 }
