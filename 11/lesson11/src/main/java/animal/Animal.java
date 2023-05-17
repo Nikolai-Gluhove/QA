@@ -1,32 +1,17 @@
 package animal;
 
-import animal.birds.Calibri;
-import animal.birds.IBirds;
+public abstract class Animal {
+    private String eye;
 
-public class Animal {
-
-    public Animal(String eyes){
-        colorEyes = eyes;
-
-    }
-    public Animal(){
-
+    public Animal(String eye){
+        this.eye = eye;
     }
 
-    private String colorEyes;
+    public abstract void say();
 
-
-    public String getColorEyes(){
-        return colorEyes;
+    public String getEye(){
+        return this.eye;
     }
-
-    public void say(String voice){
-        System.out.println(voice);
-    }
-
-    public void see(){
-        System.out.println("Я вижу");
-    }
-
-
 }
+
+
