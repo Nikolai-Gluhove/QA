@@ -13,7 +13,7 @@ public class Main {
 
         IBirds popugaj = new Popugaj("black");
         popugaj.fly();
-        ((Animal)popugaj).say();
+        ((Animal)popugaj).say(); 
     }
 
 
