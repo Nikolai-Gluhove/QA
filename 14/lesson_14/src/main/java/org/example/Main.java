@@ -55,7 +55,18 @@ public class Main {
 
         List<Integer> resultStream = gerDataByStream(list, num -> num % 2 == 0);
 
-        System.out.println("Конец");
+
+        list.stream()
+                .map(String::valueOf)
+                .collect(Collectors.toList());
+
+
+        //суммирование по всем эл stream
+        Integer sum = list.stream()
+                            .reduce((Integer accum, Integer num) -> accum + num).get();
+
+        System.out.println(sum);
+
     }
 
     public static List<Integer> gerDataByStream(List<Integer> list, Predicate<Integer> predicate){
@@ -64,6 +75,16 @@ public class Main {
                 .filter(predicate) // отфильтровать
                 .collect(Collectors.toList()); // собрать в коллекцию
     }
+
+    public static boolean constains(List<Integer> list, Predicate<Integer> predicate){
+        return ! list
+                .stream()
+                .filter(predicate)
+                .collect(Collectors.toList())
+                .isEmpty();
+    }
+
+
 
 
 }
