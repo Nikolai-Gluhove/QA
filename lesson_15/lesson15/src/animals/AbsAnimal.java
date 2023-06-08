@@ -65,7 +65,7 @@ public abstract class AbsAnimal {
     //переопределить метод toString
     @Override
     public String toString(){
-        return String.format("Привет меня зовуп %s, мне %d %s, я вешу - %d кг, мой цвет - %s", name, age, getYearStringPadej(age), weight ,color);
+        return String.format("Привет меня зовут %s, мне %d %s, я вешу - %d кг, мой цвет - %s", name, age, getYearStringPadej(age), weight ,color);
     }
 
     //падежи годов
